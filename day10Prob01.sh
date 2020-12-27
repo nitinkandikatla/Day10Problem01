@@ -1,5 +1,4 @@
 #! /bin/bash
-  
 declare -A Dic
 echo "Arithmetic computation and sorting"
 echo "Enter 3 values"
@@ -20,4 +19,20 @@ for((i=1;i<5;i++))
 do
 	arr[$i]=${Dic[$i]}
 done
+for ((i = 0; i<5; i++))
+do
+	for((j = 0; j<5-i-1; j++))
+	do
+		if [[ ${arr[j]} -lt ${arr[$((j+1))]} ]]
+        	then
+            		# swap
+            		temp=${arr[j]}
+            		arr[$j]=${arr[$((j+1))]}
+            		arr[$((j+1))]=$temp
+        	fi
+    	done
+done
+echo "Array sorted in Descending order :"
+echo ${arr[*]}
+
 
