@@ -1,4 +1,5 @@
 #! /bin/bash
+declare -A Dic
 echo "Arithmetic computation and sorting"
 echo "Enter 3 values"
 read a b c
@@ -10,4 +11,8 @@ result3=$(( $c + $a / $b ))
 echo "$result3"
 result4=$(( $a % $b + $c ))
 echo "$result4"
+Dic[1]=$result1
+Dic[2]=$result2
+Dic[3]=$result3
+Dic[4]=$result4
 
