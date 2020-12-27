@@ -1,4 +1,5 @@
 #! /bin/bash
+  
 declare -A Dic
 echo "Arithmetic computation and sorting"
 echo "Enter 3 values"
@@ -15,4 +16,8 @@ Dic[1]=$result1
 Dic[2]=$result2
 Dic[3]=$result3
 Dic[4]=$result4
+for((i=1;i<5;i++))
+do
+	arr[$i]=${Dic[$i]}
+done
 
